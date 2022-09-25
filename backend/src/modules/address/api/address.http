@@ -1,0 +1,25 @@
+//Get Address using cep
+//To see the return from the database, run this request twice
+GET http://localhost:3003/address/cep/22220000
+content-type: application/json
+###
+
+
+//Return cep not found when unexisting cep is given
+GET http://localhost:3003/address/cep/00000000
+content-type: application/json
+###
+
+
+//Return **Bad Request** if the cep code does not follow the rules bellow
+//Accepts only numbers
+//Length(8)
+GET http://localhost:3003/address/cep/00000-000
+content-type: application/json
+###
+
+
+//Return **Not found** if no cep param was given
+GET http://localhost:3003/address/cep/
+content-type: application/json
+###
