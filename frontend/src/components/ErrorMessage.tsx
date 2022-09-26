@@ -1,5 +1,5 @@
 interface ErrorProps {
-  name: string
+  name: any
   errors: string[] | undefined
 }
 

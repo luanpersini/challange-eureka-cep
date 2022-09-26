@@ -20,7 +20,10 @@ export const AddressSearch = () => {
       if (result.status === 200) {
         setAddress(result.data)
       } else {
-        const { message } = result.data
+        let { message } = result.data
+        if(message == 'The given CEP was not found.') {
+          message = 'Cep não encontrado.'
+        }
         const errorsFound = { ...errors }
         const name = 'cep' as any
         if (message && search.cep.length === 8) {
@@ -50,7 +53,7 @@ export const AddressSearch = () => {
   return (
     <div className="my-5">
       <Input name="cep" label="Cep" placeholder='Cep sem hífen. ex: 22220000' errors={errors} onChange={handleChange} inputvalue={search.cep} />
-      <div className="my-5">
+      <div className="my-5 p-3 bg-light rounded">
         {address &&
           Object.entries(address).map(([key, value], index) => {
             return (

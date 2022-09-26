@@ -35,8 +35,13 @@ Create an API service to receive a cep code and return an address using the viaC
 ### Setup
 
 1. clone the git repository
-1. run `yarn install`
+1. enter `/backend` folder
+1. run `yarn` to install the packages (if you dont have yarn, you can use npm)
 1. run `npm start` to start the aplication
+1. enter `/frontend` folder
+1. run `yarn` to install the packages (if you dont have yarn, you can use npm)
+1. run `npm start` to start the aplication
+
 
 </br>
 
@@ -85,3 +90,4 @@ I've used clean architecture with concepts of "Domain Driven Design" (which is a
 
 The services (usecases) contains the business rules of the application.
 
+The frontend didnt receive too much attention, since the focus is the backend and a better ui and architecture would consume too much time.
