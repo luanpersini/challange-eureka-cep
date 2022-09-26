@@ -49,11 +49,11 @@ Create an API service to receive a cep code and return an address using the viaC
 
 ### To run the tests
 
-1. open the terminal and run the command of the chosen test type:
+1. open the terminal, access the backend folder and run the command of the chosen test type:
 
-- to run all tests: `npm run test` 
 - to run unit tests: `npm run test:unit`
 - to run end to end tests: `npm run test:e2e`
+- to run all tests: `npm run test` 
 
 </br>
 
