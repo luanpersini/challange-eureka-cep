@@ -1,5 +1,5 @@
 export const makeAddressData = (params?: any) => ({
-  cep: params?.cep || '01001-000',
+  cep: params?.cep || '01001000',
   logradouro: 'Praça da Sé',
   complemento: 'lado ímpar',
   bairro: 'Sé',
@@ -17,5 +17,13 @@ export const makeAddressRepositoryMock = () => ({
 })
 
 export const makeHttpClientMock = () => ({
-  request: jest.fn()
+  request: jest.fn(()=> Promise.resolve({data: makeAddressData(), status: 200}))
+})
+
+export const makeRequestOptions = (params?: any) => ({
+  url: `https://viacep.com.br/ws/${params.cep}/json/`,
+  method: 'get',
+  headers: {
+    'Content-Type': 'application/json'
+  }
 })

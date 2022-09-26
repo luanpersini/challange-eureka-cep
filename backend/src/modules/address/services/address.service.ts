@@ -48,7 +48,8 @@ export class AddressService implements IAddressService {
       }
     }
     try {
-      const result = await this.httpClient.request(options)      
+      const result = await this.httpClient.request(options)  
+                
       if (result.data.erro || result.status === 400) {
         return null
       }

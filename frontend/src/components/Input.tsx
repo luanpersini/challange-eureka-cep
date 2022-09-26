@@ -2,7 +2,7 @@
 
 import { InputHTMLAttributes } from 'react';
 import Form from 'react-bootstrap/esm/Form';
-import { ErrorMessage } from './error-message';
+import { ErrorMessage } from './ErrorMessage';
 
 interface Props extends InputHTMLAttributes<HTMLInputElement> {
   name: string
