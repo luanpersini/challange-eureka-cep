@@ -22,12 +22,15 @@ Create an API service to receive a cep code and return an address using the viaC
 - Swagger
 - NestJS Logger
 
+</br>
+
 ### Test files:
 
 - files `.spec.ts` - unit tests
 - files `.e2e-spec.ts` - end to end tests
 
 </br>
+
 
 ### Setup
 
@@ -46,6 +49,8 @@ Create an API service to receive a cep code and return an address using the viaC
 - to run all tests: `npm run test` 
 - to run unit tests: `npm run test:unit`
 - to run end to end tests: `npm run test:e2e`
+
+</br>
 
 ###  Testing the API using REST Client ##
 
